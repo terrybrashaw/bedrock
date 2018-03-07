@@ -1,0 +1,20 @@
+# Mining mode. "1" is Ethereum-only.
+-mode 1
+
+# Fine-tuning. Not exactly sure *what* it changes but it does uniquely affect the performance of each GPU.
+-dcri 6
+
+# AMD assembly GPU kernels. Note: try -asm 2
+-asm 1
+
+# Run some startup routines synchronously (just to be safe).
+-gser 1
+
+# Not using this because it's slow af
+# -gser 2
+
+# Enable watchdog. Claymore should close if a thread crashes.
+-wd 1
+
+# Run `reboot.sh` if Claymore crashes.
+-r 1

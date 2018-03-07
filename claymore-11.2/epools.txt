@@ -1,0 +1,3 @@
+POOL: stratum+ssl://us1.ethermine.org:5555, WALLET: %ETHER_WALLET%.%LOGNAME%, EPSW: x
+POOL: stratum+ssl://us2.ethermine.org:5555, WALLET: %ETHER_WALLET%.%LOGNAME%, EPSW: x
+

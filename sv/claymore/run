@@ -1,0 +1,3 @@
+#!/bin/bash
+source ./miner.sh
+exec runuser --login $MINER --command "/etc/sv/claymore/main.sh"
