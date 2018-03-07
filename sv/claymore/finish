@@ -1,3 +1,6 @@
 #!/bin/bash
+
+# shellcheck disable=SC1091
 source ./miner.sh
-exec runuser --login $MINER --command "tmux kill-session -t Claymore"
+
+exec runuser --login "$MINER" --command "tmux kill-session -t Claymore"
