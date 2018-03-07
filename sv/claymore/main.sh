@@ -8,5 +8,5 @@ tmux new-session -d -s Claymore ~/claymore/ethdcrminer64
 
 # Wait until the session gets killed
 while tmux has-session -t Claymore; do
-        sleep 1
+    sleep 1
 done
