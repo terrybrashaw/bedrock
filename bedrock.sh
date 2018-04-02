@@ -148,7 +148,8 @@ if [[ "$linux_distribution" == "--void" ]]; then
     sudo cat /etc/sudoers.d/"${LOGNAME}"_reboot
 
     echo
-    echo_comment "Create symbolic links to libs that Claymore needs"
+    echo_comment "Install Claymore dependencies"
+    sudo xbps-install --sync --yes libressl-devel
     sudo ln --force --verbose --symbolic /lib/libssl.so /lib/libssl.so.1.0.0
     sudo ln --force --verbose --symbolic /lib/libcrypto.so /lib/libcrypto.so.1.0.0
 
