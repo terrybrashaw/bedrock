@@ -168,6 +168,10 @@ if [[ "$linux_distribution" == "--void" ]]; then
 
     # Enable the Claymore runit service
     sudo ln --force --verbose --symbolic /etc/sv/claymore /var/service 
+
+    echo
+    echo_comment "Set Fish as ${LOGNAME}'s shell"
+    chsh --shell "/usr/bin/fish"
 fi
 
 echo_success "Done"
