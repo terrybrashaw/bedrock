@@ -89,7 +89,7 @@ if [[ "$linux_distribution" == "--void" ]]; then
     # Do this before installing anything else, because accurate time is kind of important.
     echo
     echo_comment "Setup the NTP daemon"
-    sudo xbps-install --sync --update --yes chrony
+    sudo xbps-install --sync --yes chrony
     sudo ln --force --verbose --symbolic /etc/sv/chronyd/ /var/service/
     sudo sv start chronyd
 
@@ -100,7 +100,7 @@ if [[ "$linux_distribution" == "--void" ]]; then
 
     echo
     echo_comment "Install/update general-purpose applications and dependencies"
-    sudo xbps-install --sync --update --yes \
+    sudo xbps-install --sync --yes \
         pkg-config \
         fish-shell \
         neovim \
@@ -128,7 +128,7 @@ if [[ "$linux_distribution" == "--void" ]]; then
     echo_comment "Install/update GPU drivers and settings (${gpu_vendor})"
     case "$gpu_vendor" in
         --nvidia)
-            sudo xbps-install --sync --update --yes \
+            sudo xbps-install --sync --yes \
                 void-repo-nonfree \
                 nvidia \
                 nvidia-opencl
