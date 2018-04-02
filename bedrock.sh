@@ -134,6 +134,10 @@ if [[ "$linux_distribution" == "--void" ]]; then
                 nvidia-opencl
             ;;
         --amd)
+            sudo xbps-install --sync --yes \
+                void-repo-nonfree \
+                catalyst \
+                catalyst-opencl
             ;;
     esac
 
