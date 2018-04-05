@@ -126,16 +126,16 @@ if [[ "$linux_distribution" == "--void" ]]; then
 
     echo
     echo_comment "Install/update GPU drivers and settings (${gpu_vendor})"
+    sudo xbps-install --sync --yes void-repo-nonfree
+    sudo xbps-install --sync --update --yes
     case "$gpu_vendor" in
         --nvidia)
             sudo xbps-install --sync --yes \
-                void-repo-nonfree \
                 nvidia \
                 nvidia-opencl
             ;;
         --amd)
             sudo xbps-install --sync --yes \
-                void-repo-nonfree \
                 catalyst \
                 catalyst-opencl
             ;;
