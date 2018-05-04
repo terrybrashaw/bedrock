@@ -84,6 +84,8 @@ fi
 if [[ "$linux_distribution" == "--void" ]]; then
     echo
     echo_comment "Update the system"
+    # XBPS doesn't sync and update in the right order, so we need to update twice.
+    sudo xbps-install --sync --update --yes 
     sudo xbps-install --sync --update --yes 
 
     # Do this before installing anything else, because accurate time is kind of important.
